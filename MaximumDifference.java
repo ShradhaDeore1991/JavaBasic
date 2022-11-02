@@ -7,7 +7,7 @@ The Maximum difference between two elements in the array is: 8
  */
 
 
-package array;
+package GitProject.JavaBasic.JavaBasic;
 
 import java.util.Arrays;
 
