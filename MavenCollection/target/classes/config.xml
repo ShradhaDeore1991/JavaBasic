@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class ="org.example.Student" id="ss">
+        <constructor-arg name="name" >
+            <list>
+                <value>shradha</value>
+                <value>Tejas</value>
+                <value>Atiksh</value>
+                <value>shradha</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="rollno" >
+            <set>
+                <value>01</value>
+                <value>02</value>
+                <value>03</value>
+                <value>04</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg name ="address" ref="aa" >
+
+        </constructor-arg>
+    </bean>
+
+    <bean class ="org.example.Address" id="aa">
+
+        <constructor-arg name="city" >
+            <list>
+                <value>Mumbai</value>
+              <value>Bristol</value>
+                <value>Mexico</value>
+              <value>Benoni</value>
+         </list>
+      </constructor-arg>
+
+       <constructor-arg name="country" >
+           <list>
+               <value>India</value>
+               <value>England</value>
+              <value>America</value>
+                <value>SouthAfrica</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="pincode" >
+            <map>
+                <entry key="Mumbai" value="4001"/>
+                <entry key="Bristol" value="4002"/>
+                <entry key="Mexico" value="4003"/>
+                <entry key="Benoni" value="4004"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+</beans>

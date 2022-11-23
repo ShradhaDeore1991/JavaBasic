@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class = "org.example.Student" id = "s">
+    <constructor-arg name="name">
+        <list>
+            <value>Shradha</value>
+            <value>Tejas</value>
+            <value>Atiksh</value>
+        </list>
+    </constructor-arg>
+        <constructor-arg name="rollno">
+            <list>
+                <value>01</value>
+                <value>02</value>
+                <value>03</value>
+            </list>
+    </constructor-arg>
+
+        <constructor-arg name ="Subject" ref="s1" />
+        <constructor-arg name="Address" ref="a1"/>
+    </bean>
+
+
+    <bean class = "org.example.Subject" id = "s1">
+        <constructor-arg  value="87"/>
+       <constructor-arg  value="67"/>
+        <constructor-arg value="89"/>
+
+    </bean>
+
+    <bean class = "org.example.Address" id = "a1">
+        <constructor-arg name="city">
+            <list>
+                <value>Mumbai</value>
+                <value>Mexico</value>
+                <value>Bristol</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="country">
+            <list>
+                <value>India</value>
+                <value>America</value>
+                <value>England</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
